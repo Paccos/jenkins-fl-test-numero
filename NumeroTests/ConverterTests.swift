@@ -27,3 +27,14 @@
 /// THE SOFTWARE.
 
 
+import XCTest
+@testable import Numero
+
+class ConverterTests: XCTestCase {
+    func testConversionForTwo() {
+        let converter = Converter()
+        let result = converter.convert(2)
+        
+        XCTAssertEqual(result, "II", "Conversion for 2 is incorrect.")
+    }
+}
