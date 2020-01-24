@@ -31,10 +31,24 @@ import XCTest
 @testable import Numero
 
 class ConverterTests: XCTestCase {
+    var converter: Converter!
+    
+    
+    override func setUp() {
+        converter = Converter()
+    }
+    
+    
     func testConversionForTwo() {
-        let converter = Converter()
         let result = converter.convert(2)
         
         XCTAssertEqual(result, "II", "Conversion for 2 is incorrect.")
+    }
+    
+    
+    func testConversionForThree() {
+        let result = converter.convert(3)
+        
+        XCTAssertEqual(result, "III", "Conversion for 2 is incorrect.")
     }
 }
